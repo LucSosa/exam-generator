@@ -15,6 +15,15 @@ public class ApplicationUser extends AbstractEntity{
     @OneToOne
     private Teacher teacher;
 
+    public ApplicationUser() {
+    }
+
+    public ApplicationUser(ApplicationUser applicationUser) {
+        this.username = applicationUser.username;
+        this.password = applicationUser.password;
+        this.teacher = applicationUser.teacher;
+    }
+
     public String getUsername() {
         return username;
     }
