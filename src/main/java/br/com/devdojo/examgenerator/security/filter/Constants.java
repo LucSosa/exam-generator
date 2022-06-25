@@ -1,5 +1,7 @@
 package br.com.devdojo.examgenerator.security.filter;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
@@ -11,5 +13,6 @@ public class Constants {
 
     public static void main(String[] args) {
         System.out.println(TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS));
+        System.out.println(new BCryptPasswordEncoder().encode("devdojo"));
     }
 }
